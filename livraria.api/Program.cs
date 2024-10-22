@@ -88,7 +88,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Livraria Pixel Infinito by - José Cristóvão", Version = "v1", });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Livraria by - José Cristóvão", Version = "v1", });
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
