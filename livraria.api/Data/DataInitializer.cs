@@ -12,12 +12,12 @@ namespace livraria.api.Data
             {
                 Id = Guid.NewGuid(),
                 SecurityStamp = Guid.NewGuid().ToString(),
-                Email = "admin@infinito.com",
+                Email = "admin@admin.com",
                 PhoneNumber = "925378361",
                 NormalizedUserName = "Administrador",
-                NormalizedEmail = "admin@infininto.com",
+                NormalizedEmail = "admin@admin.com",
                 FullName = "Administrador",
-                UserName = "infinito",
+                UserName = "Administrador",
                 EmailConfirmed = true,
                 UserType = EUserType.Administrator,
                 Active = true
@@ -26,7 +26,7 @@ namespace livraria.api.Data
             // Verifica se o usuário já existe
             if (await userManager.FindByEmailAsync(admin.Email) == null)
             {
-                var result = await userManager.CreateAsync(admin, "123@Mudar");
+                var result = await userManager.CreateAsync(admin, "123#Password");
                 if (!result.Succeeded)
                 {
                     throw new Exception($"Erro ao criar usuário: {string.Join(", ", result.Errors.Select(e => e.Description))}");
